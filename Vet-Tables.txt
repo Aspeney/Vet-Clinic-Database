@@ -1,0 +1,52 @@
+CREATE TABLE doctors (
+  id INT,
+  name TEXT,
+  surname TEXT,
+  );
+  
+ INSERT INTO doctors (id, name, surname) VALUES (2345, 'Agata', 'Kowalska');
+ INSERT INTO doctors (id, name, surname) VALUES (5363, 'Jan', 'Nowak');
+ INSERT INTO doctors (id, name, surname) VALUES (2763, 'Ewa', 'Piotrowska');
+  
+CREATE TABLE pets (
+  id INT,
+  kind TEXT,
+  name TEXT,
+  age INT,
+  clientid INT
+  );
+  
+ INSERT INTO pets (id, kind, name, age, clientid) VALUES (09712, 'kot', 'Biszkopt', 4, 23156)
+ INSERT INTO pets (id, kind, name, age, clientid) VALUES (09564, 'pies', 'Lucek', 3, 23156)
+ INSERT INTO pets (id, kind, name, age, clientid) VALUES (07641, 'chomik', 'Imibirek', 2, 55614)
+ INSERT INTO pets (id, kind, name, age, clientid) VALUES (02651, 'kot', 'Pusia', 3, 71681)
+ INSERT INTO pets (id, kind, name, age, clientid) VALUES (09758, 'pies', 'Burek', 4, 77644)
+  
+CREATE TABLE clients (
+  id INT,
+  name TEXT,
+  surname TEXT,
+  phone TEXT,
+  adress TEXT,
+  e-mail TEXT,
+  );
+  
+ INSERT INTO clients (id, name, surname, phone, adress, e-mail) VALUES (23156, 'Marta', 'Grzyb', '508345006', 'Stokrotkowa 4', 'marta.grzyb4@gmail.com');
+ INSERT INTO clients (id, name, surname, phone, adress, e-mail) VALUES (55614, 'Grzegorz', 'Brzęczyszczykiewicz', '504321716', 'Malinowa 2/4', 'grzegorz.b@gmail.com');
+ INSERT INTO clients (id, name, surname, phone, adress, e-mail) VALUES (71681, 'Bartłomiej', 'Las', '654231451', 'Poznańska 23/6', 'b.las12@gmail.com');
+ INSERT INTO clients (id, name, surname, phone, adress, e-mail) VALUES (77644, 'Helena', 'Madej', '605606607', 'Perłowa 3', 'helena.mad4@gmail.com');
+
+CREATE TABLE appointments (
+  id INT,
+  ownerid INT,
+  petid INT,
+  day DATE,
+  hour TEXT,
+  );
+  
+ INSERT INTO appointments (id, ownerid, petid, day, hour) VALUES (34126, 23156, 09712, 2020-03-12, '15:15');
+ INSERT INTO appointments (id, ownerid, petid, day, hour) VALUES (51417, 71681, 09712, 2021-10-02, '16:30');
+ INSERT INTO appointments (id, ownerid, petid, day, hour) VALUES (28716, 71681, 09712, 2021-04-14, '10:20');
+ INSERT INTO appointments (id, ownerid, petid, day, hour) VALUES (81777, 77644, 09712, 2022-03-12, '11:15');
+ INSERT INTO appointments (id, ownerid, petid, day, hour) VALUES (01871, 23156, 09712, 2022-11-12, '9:55');
+
