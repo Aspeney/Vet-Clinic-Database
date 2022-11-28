@@ -1,0 +1,42 @@
+SELECT * FROM doctors;
+
+ALTER TABLE doctors 
+ADD COLUMN email TEXT;
+
+UPDATE doctors 
+SET email = 'vetdoctor23@gmail.com' 
+WHERE id = 2345;
+
+DELETE FROM pets 
+WHERE ownerid IS NULL;
+
+SELECT name AS 'Marta'
+FROM doctors;
+
+SELECT DISTINCT ownerid
+FROM visits;
+
+SELECT *
+FROM pets
+WHERE kind = 'kot';
+
+SELECT * 
+FROM owners
+WHERE name LIKE 'A%';
+
+SELECT *
+FROM visits
+WHERE day BETWEEN 2021-01-01 AND 2021-12-31;
+
+SELECT *
+FROM visits
+WHERE day LIKE 2021%
+ORDER BY day DESC;
+
+SELECT name,
+ CASE
+  WHEN kind = 'kot THEN 'Dziś przyjmujemy kota!';
+  WHEN kind = 'pies' THEN 'Dziś przyjmujemy psa!';
+  ELSE 'Dziś przyjmujemy inne zwierzę!'
+ END
+FROM pets;
